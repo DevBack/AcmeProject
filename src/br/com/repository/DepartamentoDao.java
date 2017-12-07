@@ -52,7 +52,7 @@ public class DepartamentoDao {
 		
 		this.connection = ConnectionFactory.getConnection();
 		
-		String SQL = "SELECT * FROM departamento";
+		String SQL = "SELECT * FROM departamento ORDER BY nome";
 		PreparedStatement statement = null;
 		ResultSet resultSet = null;
 		

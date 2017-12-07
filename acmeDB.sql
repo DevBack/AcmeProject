@@ -1,35 +1,3 @@
-create database acmeDB;
-
-use acmeDB;
-
-create table departamento(
-	id int not null primary key auto_increment,
-    nome varchar(100) not null
-);
-
-create table funcionario(
-	id int not null primary key auto_increment,
-    id_departamento int not null,
-    nome varchar(150) not null,
-    salario double not null,
-    matricula varchar(10),
-    foreign key(id_departamento) references departamento(id)
-);
-
-create table email(
-	id int not null primary key auto_increment,
-    id_funcionario int not null,
-    descricao varchar(150) not null,
-    foreign key(id_funcionario) references funcionario(id)
-);
-
-create table telefone(
-	id int not null primary key auto_increment,
-    id_funcionario int not null,
-    ddd varchar(3),
-    numero varchar(11),
-    foreign key(id_funcionario) references funcionario(id)
-);
 
 create table dependente(
 	id int not null primary key auto_increment,
